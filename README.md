@@ -53,3 +53,11 @@ make html
 ```
 which by default will output the `index.html` page to
 `docs/build/html/index.html`.
+
+## Test
+3. Indexing void object for fully control the bucket structure.
+
+Indexd supports void or blank records that allows users to pre-register data files in indexd before actually registering them. The complete flow contains three main steps: pre-register, hash/size/url populating and data node registration:\
+    \t- Fence requests blank object from indexd. Indexd creates an object with no hash, size, and urls except the `uploader` field.\
+    \t- Indexd listener mornitors bucket update, update to indexd with url, hash, size.\
+    \t- The client application (windmill or gen3-data-client) lists records for data files which the user needs to submit to the graph. The user fills all empty fields and submit the request to indexd to update the `acl`
