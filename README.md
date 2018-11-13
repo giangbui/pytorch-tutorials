@@ -55,9 +55,20 @@ which by default will output the `index.html` page to
 `docs/build/html/index.html`.
 
 ## Test
-3. Indexing void object for fully control the bucket structure.
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
 
-Indexd supports void or blank records that allows users to pre-register data files in indexd before actually registering them. The complete flow contains three main steps: pre-register, hash/size/url populating and data node registration:\
-    \t- Fence requests blank object from indexd. Indexd creates an object with no hash, size, and urls except the `uploader` field.\
-    \t- Indexd listener mornitors bucket update, update to indexd with url, hash, size.\
-    \t- The client application (windmill or gen3-data-client) lists records for data files which the user needs to submit to the graph. The user fills all empty fields and submit the request to indexd to update the `acl`
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+- cong
